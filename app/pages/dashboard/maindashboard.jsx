@@ -45,7 +45,7 @@ const Maindashboard = () => {
       {/* <Navigation /> */}
 
       {session?.user?.role === "teaching staff" && <TeacherDashboard />}
-      {session?.user?.roles?.includes("admin") && <AdminDashboard />}
+      {session?.user?.role=== "admin" && <AdminDashboard />}
       {session?.user?.roles?.includes("parent") && <ParentDashboard user_id={session?.user?.id} />}
       {session?.user?.role === "student" && <Studentdashboard />}
     </div>
