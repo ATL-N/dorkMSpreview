@@ -31,7 +31,7 @@ const Login = () => {
 
 
     setDisableBtn(true);
-    console.log("user log in data", email, password, trimmedEmail);
+    console.log("user log in data", email, password);
     setError("");
 
     try {
