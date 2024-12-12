@@ -63,10 +63,11 @@ const SidePanel = () => {
   // Your menuItems array remains the same
 
   if (
-    session?.user.role == "admin" ||
-    session?.user?.roles?.some((role) =>
-      authorizedRoles.includes(role)
-    )
+    session?.user.role == "admin" 
+    // ||
+    // session?.user?.roles?.some((role) =>
+    //   authorizedRoles.includes(role)
+    // )
   ) {
     menuItems = [
       {
