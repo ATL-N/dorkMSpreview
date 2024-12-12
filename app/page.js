@@ -17,7 +17,7 @@ export default function Home() {
   const dateString = "2024-11-01";
 
 
-  if (!isWithinThreeMonths(process.env.ACTIVE_DATE)) {
+  if (!isWithinThreeMonths(process.env.ACTIVE_DATE || dateString)) {
     return (
       <div>
         {" "}
