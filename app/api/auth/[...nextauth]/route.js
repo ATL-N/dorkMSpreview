@@ -58,7 +58,7 @@ const handler = NextAuth({
 
       async authorize(credentials) {
         console.log("Credentials received:", {
-          email: credentials?.email,
+          email: credentials?.email?.trim(),
           passwordProvided: !!credentials?.password,
         });
 
@@ -71,8 +71,8 @@ const handler = NextAuth({
           // Find user by email or username
           const user = mockUsers.find(
             (u) =>
-              u.user_email === credentials.email ||
-              u.user_name === credentials.email
+              u.user_email === credentials.email?.trim() ||
+              u.user_name === credentials.email?.trim()
           );
 
           console.log("User found:", user ? user.user_name : "No user");

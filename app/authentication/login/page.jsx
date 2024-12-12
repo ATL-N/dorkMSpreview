@@ -26,19 +26,19 @@ const Login = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
 
-      const trimmedEmail = email.trim();
-      const trimmedPassword = password.trim();
+      // const trimmedEmail = email.trim();
+      // const trimmedPassword = password.trim();
 
 
     setDisableBtn(true);
-    console.log("user log in data", email, password);
+    console.log("user log in data", email, password, trimmedEmail);
     setError("");
 
     try {
       const result = await signIn("credentials", {
         redirect: false,
-        trimmedEmail,
-        trimmedPassword,
+        email,
+        password,
       });
 
       if (result?.error) {
