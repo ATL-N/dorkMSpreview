@@ -44,10 +44,10 @@ const Maindashboard = () => {
     <div className="flex-1 ml-0 md:ml-16 mt-16 mb-1 p-6 pb-0 bg-gray-100">
       {/* <Navigation /> */}
 
+      {session?.user?.role === "teaching staff" && <TeacherDashboard />}
       {session?.user?.roles?.includes("admin") && <AdminDashboard />}
       {session?.user?.roles?.includes("parent") && <ParentDashboard user_id={session?.user?.id} />}
       {session?.user?.role === "student" && <Studentdashboard />}
-      {session?.user?.role === "teaching staff" && <TeacherDashboard />}
     </div>
   );
 };
