@@ -12,7 +12,7 @@ import LoadingPage from "../../components/generalLoadingpage";
 const Maindashboard = () => {
   const { data: session, status } = useSession();
   const router = useRouter();
-  // console.log('user session data:',session )
+  console.log('user session data:',session )
 
   if (status === "loading") {
     return (
