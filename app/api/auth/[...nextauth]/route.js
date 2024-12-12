@@ -5,7 +5,7 @@ import bcrypt from "bcryptjs";
 // Mock function to simulate fetching user roles and permissions
 const fetchUserRolesAndPermissions = async () => {
   return {
-    roles: ["admin", "user"],
+    roles: ["admin", "Admin", "user", "teaching staff"],
     permissions: ["read", "write", "delete"],
     activeSemester: {
       semester_id: 1,
@@ -22,17 +22,26 @@ const mockUsers = [
     user_id: 1,
     user_name: "admin",
     user_email: "admin@example.com",
-    password: '$2a$10$dTYFyllq1uXxg0kYtDAkdufYdPmAhb14Nsr2rkoZEphIfIcnIztgC',
+    password: "$2a$10$dTYFyllq1uXxg0kYtDAkdufYdPmAhb14Nsr2rkoZEphIfIcnIztgC",
     // password: "$2a$10$EixZaYVK1fsbw1ZfbX3OXePaWxn96p36WQoeG6Lruj3vjPGga31lW", // hashed 'password123'
     role: "admin",
     status: "active",
   },
   {
     user_id: 2,
-    user_name: "user",
+    user_name: "admin",
+    user_email: "admin@example.com",  
+    password: "$2a$10$dTYFyllq1uXxg0kYtDAkdufYdPmAhb14Nsr2rkoZEphIfIcnIztgC", // hashed '0551577446'
+    // password: "$2a$10$EixZaYVK1fsbw1ZfbX3OXePaWxn96p36WQoeG6Lruj3vjPGga31lW", // hashed 'password123'
+    role: "admin",
+    status: "active",
+  },
+  {
+    user_id: 2,
+    user_name: "teaching staff",
     user_email: "user@example.com",
-    password: "$2a$10$EixZaYVK1fsbw1ZfbX3OXePaWxn96p36WQoeG6Lruj3vjPGga31lW", // hashed 'password123'
-    role: "user",
+    password: "$2a$10$dTYFyllq1uXxg0kYtDAkdufYdPmAhb14Nsr2rkoZEphIfIcnIztgC",
+    role: "teaching staff",
     status: "active",
   },
 ];
