@@ -14,17 +14,17 @@ export default function Home() {
     return currentDate <= threeMonthsLater;
   }
 
-  const dateString = "2024-11-01";
+  const dateString = "2024-12-01";
 
 
-  if (!isWithinThreeMonths(process.env.ACTIVE_DATE || dateString)) {
-    return (
-      <div>
-        {" "}
-        Contact the software engineer on +233551577446 to retify the issue{" "}
-      </div>
-    );
-  }
+  // if (!isWithinThreeMonths(process.env.ACTIVE_DATE || dateString)) {
+  //   return (
+  //     <div>
+  //       {" "}
+  //       Contact the software engineer on +233551577446 to retify the issue{" "}
+  //     </div>
+  //   );
+  // }
 
   return (
     <div className="flex bg-gray-200 h-svh overflow-hidden text-cyan-700">
