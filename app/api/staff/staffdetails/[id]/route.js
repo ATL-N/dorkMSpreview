@@ -8,11 +8,11 @@ export async function GET(req, { params }) {
     // Mock data (expand this with more realistic data)
     const mockStaff = [
       {
-        staff_id: parseInt(id),
+        staff_id: 15,
         user_id: 21,
-        first_name: "Ernest ",
-        last_name: "Wilson",
-        middle_name: "Ernest ",
+        first_name: "Admin ",
+        last_name: "Admin",
+        middle_name: "Admin ",
         date_of_birth: "2024-08-20",
         gender: "M",
         marital_status: "Single",
@@ -45,11 +45,48 @@ export async function GET(req, { params }) {
         user_email: "nelsodork@gmail24.com",
       },
       {
-        staff_id: 1,
+        staff_id: 6,
         user_id: 21,
         first_name: "Ernest ",
-        last_name: "Wilson",
-        middle_name: "Ernest ",
+        last_name: "Owusu",
+        middle_name: " ",
+        date_of_birth: "2024-08-20",
+        gender: "M",
+        marital_status: "Single",
+        address: "newest staff",
+        phone_number: "25844245",
+        email: "nelsodork@gmail24.com",
+        emergency_contact: "0551577446",
+        date_of_joining: "2024-08-12",
+        designation: "",
+        department: "Music",
+        salary: "200.00",
+        account_number: "8040750",
+        contract_type: "Full-time",
+        employment_status: "On Leave",
+        qualification: "HND ",
+        experience: "5 years",
+        blood_group: "AB-",
+        national_id: "54246",
+        passport_number: "584455",
+        photo:
+          "https://firebasestorage.googleapis.com/v0/b/school-management-e22be.appspot.com/o/images%2FIMG-20230627-WA0051.jpg2024-09-06T14%3A33%3A46.907Z?alt=media&token=42b62bb9-db20-476d-a367-594f8ba1e5e5",
+        teaching_subject: "",
+        class_teacher: null,
+        subject_in_charge: null,
+        house_in_charge: null,
+        bus_in_charge: null,
+        library_in_charge: null,
+        status: "deleted",
+        role: "head teacher",
+        user_email: "nelsodork@gmail24.com",
+      },
+      {
+        staff_id: 13,
+        user_id: 21,
+        first_name: "Ernest 1",
+        last_name: "Nelson",
+        middle_name: "Tawiah ",
         date_of_birth: "2024-08-20",
         gender: "M",
         marital_status: "Single",
@@ -106,7 +143,7 @@ export async function GET(req, { params }) {
     const mockEvaluations = [
       {
         evaluation_id: 3,
-        evaluatee_id: parseInt(id), // Link to staff_id
+        evaluatee_id: 15, // Link to staff_id
         evaluation_date: "2024-09-10",
         teaching_effectiveness: 3,
         classroom_management: 4,
@@ -120,7 +157,7 @@ export async function GET(req, { params }) {
       },
       {
         evaluation_id: 2,
-        evaluatee_id: parseInt(id), // Link to staff_id
+        evaluatee_id: 6, // Link to staff_id
         evaluation_date: "2024-09-06",
         teaching_effectiveness: 5,
         classroom_management: 5,
