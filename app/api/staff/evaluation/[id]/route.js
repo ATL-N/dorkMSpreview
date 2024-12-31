@@ -34,7 +34,7 @@ export async function GET(req, { params }) {
       },
       {
         evaluation_id: 3,
-        evaluatee_id: 123, // Different evaluatee_id for testing
+        evaluatee_id: 2, // Different evaluatee_id for testing
         evaluation_date: "06/09/2024",
         teaching_effectiveness: "5.0",
         classroom_management: "5.0",

@@ -8,7 +8,7 @@ export async function GET(req, { params }) {
     // Mock data (expand this with more realistic data)
     const mockStaff = [
       {
-        staff_id: 12,
+        staff_id: parseInt(id),
         user_id: 21,
         first_name: "Ernest ",
         last_name: "Wilson",
@@ -106,7 +106,7 @@ export async function GET(req, { params }) {
     const mockEvaluations = [
       {
         evaluation_id: 3,
-        evaluatee_id: 12, // Link to staff_id
+        evaluatee_id: parseInt(id), // Link to staff_id
         evaluation_date: "2024-09-10",
         teaching_effectiveness: 3,
         classroom_management: 4,
@@ -120,7 +120,7 @@ export async function GET(req, { params }) {
       },
       {
         evaluation_id: 2,
-        evaluatee_id: 12, // Link to staff_id
+        evaluatee_id: parseInt(id), // Link to staff_id
         evaluation_date: "2024-09-06",
         teaching_effectiveness: 5,
         classroom_management: 5,
@@ -134,7 +134,7 @@ export async function GET(req, { params }) {
       },
       {
         evaluation_id: 3,
-        evaluatee_id: 1, // Link to staff_id
+        evaluatee_id: parseInt(id), // Link to staff_id
         evaluation_date: "2024-09-10",
         teaching_effectiveness: 3,
         classroom_management: 4,
@@ -148,7 +148,7 @@ export async function GET(req, { params }) {
       },
       {
         evaluation_id: 2,
-        evaluatee_id: 1, // Link to staff_id
+        evaluatee_id: parseInt(id), // Link to staff_id
         evaluation_date: "2024-09-06",
         teaching_effectiveness: 5,
         classroom_management: 5,

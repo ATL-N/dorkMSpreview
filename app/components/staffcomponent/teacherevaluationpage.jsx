@@ -162,7 +162,7 @@ const TeacherPerformanceEvaluationPage = ({
           <div className="flex items-center">
             <FaUser className="text-cyan-500 mr-2" />
             <span>
-              Name: {teacherData.first_name} {teacherData.last_name}
+              Name: {teacherData?.first_name} {teacherData?.last_name}
             </span>
           </div>
           <div className="flex items-center">
