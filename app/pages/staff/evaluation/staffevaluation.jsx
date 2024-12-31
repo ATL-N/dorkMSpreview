@@ -43,7 +43,7 @@ const TeacherEvaluation = ({
     if (
       session?.user?.permissions?.some((permission) =>
         authorizedPermissions.includes(permission)
-      )
+      ) || session?.user?.role === 'admin'
     ) {
       setIsAuthorised(true);
     } else {
