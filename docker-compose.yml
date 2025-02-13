@@ -12,15 +12,15 @@ services:
       - NODE_ENV=production
     labels:
       - traefik.enable=true
-      - traefik.http.routers.dorkportfolio-http.rule=Host(`${DOMAIN}`)
-      - traefik.http.routers.dorkportfolio-http.entrypoints=http
-      - traefik.http.routers.dorkportfolio-http.middlewares=https-redirect
-      - traefik.http.routers.dorkportfolio-https.rule=Host(`${DOMAIN}`)
-      - traefik.http.routers.dorkportfolio-https.entrypoints=https
-      - traefik.http.routers.dorkportfolio-https.tls=true
-      - traefik.http.routers.dorkportfolio-https.tls.certresolver=le
-      - traefik.http.routers.dorkportfolio-https.service=dorkportfolio-service
-      - traefik.http.services.dorkportfolio-service.loadbalancer.server.port=3003
+      - traefik.http.routers.dorkmspreview-http.rule=Host(`${DOMAIN}`)
+      - traefik.http.routers.dorkmspreview-http.entrypoints=http
+      - traefik.http.routers.dorkmspreview-http.middlewares=https-redirect
+      - traefik.http.routers.dorkmspreview-https.rule=Host(`${DOMAIN}`)
+      - traefik.http.routers.dorkmspreview-https.entrypoints=https
+      - traefik.http.routers.dorkmspreview-https.tls=true
+      - traefik.http.routers.dorkmspreview-https.tls.certresolver=le
+      - traefik.http.routers.dorkmspreview-https.service=dorkmspreview-service
+      - traefik.http.services.dorkmspreview-service.loadbalancer.server.port=3003
     networks:
       - web
       - traefik-public
