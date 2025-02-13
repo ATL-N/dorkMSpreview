@@ -83,7 +83,7 @@ const handler = NextAuth({
           }
 
           // Compare passwords
-console.log('credentials details', credentials, user.password)
+          console.log("credentials details", credentials, user.password);
 
           const isValid = await bcrypt.compare(
             credentials.password,
@@ -150,6 +150,7 @@ console.log('credentials details', credentials, user.password)
       return session;
     },
   },
+  baseUrl: process.env.DOMAIN || "https://dorkms.dorkordi.site",
   pages: {
     signIn: "/authentication/login",
   },
