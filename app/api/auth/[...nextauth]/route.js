@@ -150,7 +150,7 @@ const handler = NextAuth({
       return session;
     },
   },
-  baseUrl: process.env.DOMAIN || "https://dorkms.dorkordi.site",
+  baseUrl: process.env.NEXTAUTH_URL || "https://dorkms.dorkordi.site",
   pages: {
     signIn: "/authentication/login",
   },

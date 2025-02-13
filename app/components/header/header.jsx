@@ -18,7 +18,10 @@ const Header = () => {
   const { data: session } = useSession();
 
   const handleLogout = async () => {
-    await signOut({ redirect: true, callbackUrl: "/authentication/login" });
+    await signOut({
+      redirect: true,
+      callbackUrl: `${process.env.NEXTAUTH_URL}/authentication/login`,
+    });
   };
 
   return (
