@@ -33,11 +33,11 @@ const Maindashboard = () => {
   //   return <div>Loading...</div>;
   // }
 
-  if (!session) {
-     router.push("/authentication/login");
-    // console.log("running the !session");
-    // return <div className="flex">Unauthorized</div>;
-  }
+  // if (!session) {
+  //    router.push("/authentication/login");
+  //   // console.log("running the !session");
+  //   // return <div className="flex">Unauthorized</div>;
+  // }
 
   return (
     // <>
