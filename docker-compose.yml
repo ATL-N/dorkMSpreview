@@ -22,7 +22,7 @@ services:
       - traefik.http.routers.dorkmspreview-https.service=dorkmspreview-service
       - traefik.http.services.dorkmspreview-service.loadbalancer.server.port=3003
     networks:
-      - web
+      # - web
       - traefik-public
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:3003/api/health"]
@@ -32,7 +32,7 @@ services:
       start_period: 40s
 
 networks:
-  web:
-    external: true
+  # web:
+  #   external: true
   traefik-public:
     external: true
